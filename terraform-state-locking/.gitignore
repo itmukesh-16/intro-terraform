@@ -1,0 +1,10 @@
+# include the local .terraform directory, which contains the Terraform state and configuration files
+**/.terraform/*
+
+# ignore the .terraform.lock.hcl file, which is used to lock the provider versions
+*.tfstate
+*.tfstate.*
+
+.terraform.lock.hcl
+
+.doc
