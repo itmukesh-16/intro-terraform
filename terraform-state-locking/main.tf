@@ -50,3 +50,5 @@ resource "aws_instance" "web" {
     Name = "web-instance"
   }
 }
+
+
