@@ -52,3 +52,8 @@ resource "aws_instance" "web" {
 }
 
 
+resource "null_resource" "lock_test" {
+  provisioner "local-exec" {
+    command = "timeout /t 30"
+  }
+}
