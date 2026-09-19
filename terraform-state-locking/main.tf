@@ -41,3 +41,12 @@ resource "aws_route_table_association" "public" {
   route_table_id = aws_route_table.public.id
 }
 
+resource "aws_instance" "web" {
+  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  instance_type = "t2.micro"
+  subnet_id     = aws_subnet.public.id
+
+  tags = {
+    Name = "web-instance"
+  }
+}
